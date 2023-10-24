@@ -1,0 +1,34 @@
+{% extends 'base.html' %} {% block title %} Home {% endblock %} {% block content
+%}
+<header class="row h-100 mt-5">
+  <div class="h-100 col-8">
+    <img
+      class="rounded-5 shadow-lg"
+      width="100%"
+      src="{{ url_for('static', filename = 'mountains.jpg')}}"
+      alt="" />
+  </div>
+  <div class="col">
+    <div class="h-50 gradient shadow-lg text-white p-3 rounded-5">
+      <h1 class="fs-4">Welcome to my top five Bible Verses!</h1>
+      <br />
+      <p>
+        These are just some of my favorite that I always try to keep in mind.
+      </p>
+    </div>
+
+    <div
+      class="gradient rounded-5 position-relative shadow-lg p-3 mt-5 text-white">
+      <p>
+        If you would like to see them, just click the button below to be
+        redirected!
+      </p>
+      <a
+        class="btn btn-dark position-absolute bottom-0 end-0"
+        href="{{ url_for('topfive')}}"
+        >Let's Go</a
+      >
+    </div>
+  </div>
+</header>
+{% endblock %}

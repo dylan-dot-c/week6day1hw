@@ -1,0 +1,17 @@
+{% extends 'base.html' %} {% block content %}
+<h1>Welcome to my top 5 bible verses</h1>
+
+<div class="row mt-3">
+  {% for verse in verses %}
+  <p class="col-4">
+    <span class="text-danger fw-bold">{{ verse.scripture }}</span> <br />
+    {{ verse.text }}
+    <br />
+    <a
+      href="https://www.google.com/search?q={{ verse.scripture }}"
+      class="btn btn-outline-danger"
+      >Read More</a
+    >
+  </p>
+  {% endfor %} {% endblock %}
+</div>
